@@ -1,3 +1,9 @@
+Option Explicit
+ 
+Public MyFile As String
+Public Stopped As Boolean
+
+
 Sub formatter()
 '
 
