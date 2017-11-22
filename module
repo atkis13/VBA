@@ -1,0 +1,23 @@
+Sub formatter()
+'
+
+
+
+    Stopped = False
+
+    UserForm1.Show
+
+    If Stopped = True Then Exit Sub
+    
+    Application.ScreenUpdating = False
+    
+    
+
+    MsgBox MyFile, vbOKOnly, "Import file"
+    
+    'LR1 = Range("B10:B" & Rows.Count).End(xlUp).Row///////
+   
+
+
+    Set wkb = Workbooks(MyFile)
+    wkb.Sheets(1).Activate
