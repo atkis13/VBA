@@ -1,0 +1,38 @@
+
+Option Explicit
+ 
+Private Sub ComboBox1_Change()
+
+End Sub
+
+Private Sub CommandButton1_Click()
+    MyFile = Me.ComboBox1.Value
+    Unload Me
+End Sub
+ 
+Private Sub CommandButton2_Click()
+    Stopped = True
+    Unload Me
+End Sub
+ 
+Private Sub Label1_Click()
+
+End Sub
+
+Private Sub UserForm_Initialize()
+
+    
+    Me.Label1.Caption = "Please select the file you wish to import..."
+    With Me.ComboBox1
+        For Each wkb In Application.Workbooks
+            .AddItem wkb.Name
+        Next wkb
+    End With
+End Sub
+Private Sub UserForm_QueryClose(Cancel As Integer, CloseMode As Integer)
+If CloseMode = 0 Then Stopped = True
+End Sub
+
+
+
+
